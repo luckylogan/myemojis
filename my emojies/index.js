@@ -6,7 +6,7 @@ const emojiContainer = document.getElementById("emoji-container") //2. grab the 
 
 
 for (let i = 0; i < myEmojis.length; i++) { //1. loop thru the array and log each of them out to the console.
-  //console.log(myEmojis[i])
+  //console.log(myEmojis[i]) ------check to see if it works
   const emoji = document.createElement('span')
   emoji.textContent = myEmojis[i]
   emojiContainer.append(emoji)
@@ -14,6 +14,13 @@ for (let i = 0; i < myEmojis.length; i++) { //1. loop thru the array and log eac
 
 const pushBtn = document.getElementById("push-btn")
 pushBtn.addEventListener("click", function() {
-  const emojiInput = docuement.getElementById("emoji-input")
-  console.log(emojiInput.value)
+  const emojiInput = document.getElementById("emoji-input")
+  myEmojis.push(emojiInput.value)
+  emojiInput.value = ""
+  console.log(myEmojis)
 })
+
+
+
+// Push the emoji into the myEmoji's array, and clear the input field
+// However, if the input value is empty, don't do anything
