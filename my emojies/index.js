@@ -5,6 +5,9 @@ const emojiContainer = document.getElementById("emoji-container") //2. grab the 
 const emojiInput = document.getElementById("emoji-input")
 const pushBtn = document.getElementById("push-btn")
 const unshiftBtn = document.getElementById("unshift-btn")
+const popBtn = document.getElementById("pop-btn")
+const shiftBtn = document.getElementById("shift-btn")
+
 
 
 
@@ -42,4 +45,16 @@ unshiftBtn.addEventListener("click", function() {
     renderEmojis() //this renders new array 
   } //closing if statement
   
-}) //closing addEventListene
+}) //closing addEventListener
+
+
+popBtn.addEventListener("click", function() {
+    myEmojis.pop()
+    renderEmojis()
+})
+
+
+shiftBtn.addEventListener("click", function() {
+  myEmojis.shift()
+  renderEmojis()
+})
